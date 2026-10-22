@@ -92,8 +92,13 @@ int main(int argc, char* argv[]) {
         }
 
         if (sravnenie == 0) {
-            int drob_len = (first_drob_len > second_drob_len) ? first_drob_len : second_drob_len;
-
+            int drob_len; 
+            if (first_drob_len > second_drob_len) {
+                drob_len = first_drob_len;
+            } else {
+                drob_len = second_drob_len;
+            }
+    
            
             for (int i = 0; i < drob_len; ++i) {
                 char first_d = '0';
